@@ -20,14 +20,18 @@ possibilites = possibilites1()
 
 
 
-if (possibilites === '1' || possibilites === '2' || possibilites === '3' || possibilites === '4' || possibilites === '5' || possibilites === '6') {
+while (true) {
+    if (possibilities >= '1' && possibilities <= '6') {
     rhinitis = true
-} else if (possibilites === '7') {
+    break
+    } else if (possibilities === '7') {
     alert('okay, in this case we would strongly recommend you to reach out to a doctor for further assistance')
-} else {
+    break
+    } else {
     alert('esta opcion es invalida')
+    break
+    }
 }
-
 let diagnostic
 let payment
 let bank
