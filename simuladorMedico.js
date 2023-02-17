@@ -11,27 +11,24 @@ alert('please choose from the following options')
 
 
 let rhinitis = false
-function possibilites1() {
-    let rhinitisSymptoms = prompt('1:Runny nose, 2:Sneezing, 3:Nasal congestion, 4:Itching in the nose, 5:Watery eyes, 6:Itching in the eyes, 7:none of the above')
-    return rhinitisSymptoms
-}
 
-possibilites = possibilites1()
+let symptoms = Number(prompt('1:Runny nose, 2:Sneezing, 3:Nasal congestion, 4:Itching in the nose, 5:Watery eyes, 6:Itching in the eyes, 7:none of the above'))
 
 
-
-while (true) {
-    if (possibilities >= '1' && possibilities <= '6') {
-    rhinitis = true
-    break
-    } else if (possibilities === '7') {
-    alert('okay, in this case we would strongly recommend you to reach out to a doctor for further assistance')
-    break
+while (symptoms) {
+    if (symptoms === 1 || symptoms === 2 || symptoms === 3 || symptoms === 4 || symptoms === 5 || symptoms === 6 ) {
+        rhinitis = true
+        break
+    } else if (symptoms === 7 ) {
+        alert('okay, in this case we would strongly recommend you to reach out to a doctor for further assistance')
+        break
     } else {
-    alert('esta opcion es invalida')
-    break
-    }
+        alert('invalid option')
+        break
+    }   
 }
+
+
 let diagnostic
 let payment
 let bank
@@ -40,7 +37,7 @@ let interest
 
 while (rhinitis === true) {
     alert("chances are hight that you've got rhinitis")
-    diagnostic = prompt("do you wish to get you're whole diagnostic? 1:yes,  2:no")
+    diagnostic = prompt("do you wish to get your whole diagnostic? 1:yes,  2:no")
     attempts++
 
     if (diagnostic === "1") {
